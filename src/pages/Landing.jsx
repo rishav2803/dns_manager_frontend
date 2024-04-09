@@ -1,5 +1,6 @@
 import styles from "./Landing.module.css";
 import {Link} from "react-router-dom";
+import img1 from "../assets/Screenshot (858).png"
 
 export default function Landing() {
   return(
@@ -28,6 +29,7 @@ export default function Landing() {
             </div>
           </div>
           <div className={styles.img_container}>
+            <img src={img1} className={styles.img}/>
           </div>
         </section>
         <div className={styles.divider}>

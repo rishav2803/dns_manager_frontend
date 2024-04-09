@@ -120,12 +120,12 @@
 }
 .img_container {
   margin-left: 2rem;
-  display: hidden;
   width: 100%;
   padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .img {
   width: 100%;
