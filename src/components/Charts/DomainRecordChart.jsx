@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Chart from "chart.js/auto";
 import { DomainRecordContext } from "../../contexts/DomainRecordContext";
 import {getAllDomains} from "../../service/TaskService";

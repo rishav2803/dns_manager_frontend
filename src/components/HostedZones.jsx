@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import  { useContext, useState } from "react";
 import { DomainRecordContext } from "../contexts/DomainRecordContext";
 import s from "./HostedZones.module.css";
 import {Link} from "react-router-dom";

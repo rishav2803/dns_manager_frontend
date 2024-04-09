@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import  { useContext, useEffect, useState } from "react";
 import { getAllRecords, deleteRecord } from "../service/TaskService";
 import s from "./Record.module.css";
 import { useLocation, Link } from "react-router-dom";
