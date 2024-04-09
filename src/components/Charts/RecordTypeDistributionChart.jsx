@@ -2,7 +2,7 @@ import  { useContext, useEffect, useState } from "react";
 import Chart from "chart.js/auto";
 import {getAllDomainRecordTypes} from "../../service/TaskService";
 import {AuthContext} from "../../contexts/AuthContext";
-import Loading from "../Ui/Loading";
+import Loading from "../UI/Loading";
 
 
  const RecordTypeDistributionChart = () => {
