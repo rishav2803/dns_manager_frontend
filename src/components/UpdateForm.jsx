@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import { toast, ToastContainer } from "react-toastify";
 import styles from "./Form.module.css";
-import Loading from "./ui/Loading";
+import Loading from "./UI/Loading";
 import "react-toastify/dist/ReactToastify.css";
 import {useLocation ,useParams } from 'react-router-dom';
 import {DomainRecordContext} from '../contexts/DomainRecordContext';

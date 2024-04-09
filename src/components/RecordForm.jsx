@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import { toast, ToastContainer } from "react-toastify";
 import { createSingleRecord, createMultipleRecords } from '../service/TaskService';
 import styles from "./Form.module.css";
-import Loading from "./Ui/Loading";
+import Loading from "./UI/Loading";
 import "react-toastify/dist/ReactToastify.css";
 import { useLocation } from 'react-router-dom';
 import { DomainRecordContext } from '../contexts/DomainRecordContext';
