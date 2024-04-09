@@ -1,0 +1,102 @@
+.container {
+  width: min(450px, 95%);
+  height: 65vh;
+  margin-inline: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(25%);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background-color: #2c2c38;
+  position: relative;
+}
+.profile {
+  position: absolute;
+  bottom: 95%;
+  color: #6662d9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-top: 2px solid rgba(0, 0, 0, 0.3);
+  border-left: 2px solid rgba(0, 0, 0, 0.3);
+  border-right: 2px solid rgba(0, 0, 0, 0.3);
+  width: 20%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background-color: #2c2c38;
+}
+.toast {
+}
+.container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.form_group {
+  margin-bottom: 0.2rem;
+  width: 100%;
+}
+.container .input {
+  width: 80%;
+  display: block;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  border: none;
+  outline: none;
+  padding: 0.66rem;
+  font: inherit;
+  background-color: transparent;
+  box-shadow: 0 0 0;
+  border-radius: 0;
+  border-bottom: 2px solid #645fc6;
+  transition: border-bottom 250ms ease-in-out;
+  color: #fbfdff;
+}
+.container .btn {
+  padding: 0.7em 30px;
+  width: 80%;
+  border: 2px solid #645fc6;
+  color: #fbfdff;
+  font-family: JetBrains mono;
+  background-color: #645fc6;
+  transition: transform 120ms linear;
+}
+.container label {
+  display: block;
+  padding-left: 0.6rem;
+  width: 80%;
+  margin-inline: auto;
+  margin-bottom: 0.6rem;
+  font-weight: bold;
+  color: #fbfdff;
+}
+.meta {
+  width: 80%;
+  margin-inline: auto;
+  transform: translateY(100%);
+}
+.meta p {
+  color: #686c78;
+  font-weight: 600;
+}
+.meta a {
+  text-decoration: none;
+  margin-left: 0.4rem;
+  color: #645fc6;
+  border-bottom: 2px dotted #645fc6;
+}
+.container .btn:hover {
+  transform: translateY(-5px);
+}
+.btn:hover,
+.btn:focus {
+  cursor: pointer;
+}

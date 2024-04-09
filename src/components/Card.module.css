@@ -1,0 +1,18 @@
+.c {
+  width: 85%;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  padding: 1.3rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  background-color: #2c2c38;
+  color: #cbcbd3;
+  /* height: 40vh; */
+  transition: transform 200ms ease-in-out;
+  text-transform: capitalize;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.c:hover {
+  cursor: pointer;
+  /* transform: scale(1.1); */
+}

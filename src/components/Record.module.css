@@ -1,0 +1,116 @@
+.container {
+  width: 90%;
+  padding: 1.2rem;
+  margin-inline: auto;
+  background-color: #feffff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 12px;
+  margin-block: 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tableWrapper {
+  max-height: 700px;
+  overflow: auto;
+  overflow-y: scroll;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cell {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.cell:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.cell:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  outline: 0;
+  border: 0;
+  background-color: #6661bd;
+  color: white;
+  font-family: JetBrains mono;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.option {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.option:hover {
+  background-color: #f2f2f2;
+}
+
+.selected {
+  background-color: #f2f2f2;
+}
+
+.actionBtn {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  color: #333;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.actionBtn:disabled {
+  background-color: #ccc;
+  color: #999;
+  cursor: not-allowed;
+}

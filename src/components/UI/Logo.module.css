@@ -1,0 +1,18 @@
+.logo_container {
+  display: flex;
+  margin-top: 0.43rem;
+  margin-right: 0.5rem;
+}
+.logo_container span {
+  width: 6px;
+  border-radius: 3px;
+  height: 80%;
+  margin-inline: 0.2rem;
+  background-color: #615ebf;
+}
+.first {
+  background-color: #7471c1;
+}
+span:nth-child(3) {
+  background-color: #464386;
+}

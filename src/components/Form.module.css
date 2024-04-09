@@ -1,0 +1,74 @@
+.form {
+  width: 100%;
+  margin-top: 1.1rem;
+}
+.form_input {
+  display: flex;
+  flex-direction: column;
+  color: #cbcbd3;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+input[type="text"],
+select,
+input[type="date"],
+textarea {
+  width: 100%;
+  display: block;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  border: none;
+  outline: none;
+  padding: 0.6rem;
+  font: inherit;
+  background-color: transparent;
+  border-radius: 5px;
+  color: #fbfdff;
+  border: 2px solid #686c78;
+}
+.subtask {
+  display: flex;
+  color: #cbcbd3;
+}
+.subtask i {
+  height: 100%;
+  width: 10%;
+  margin-top: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.subtask i,
+.btn:hover {
+  cursor: pointer;
+}
+.form_input:nth-child(3) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.btn {
+  width: 100%;
+  padding: 0.7em 30px;
+  border: 2px solid #645fc6;
+  color: #fbfdff;
+  font-family: JetBrains mono;
+  background-color: #645fc6;
+  transition: transform 120ms linear;
+  border-radius: 12px;
+  font-weight: bolder;
+}
+.light {
+  background-color: #fbfdff;
+  color: #645fc6;
+  border: 2px solid #fbfdff;
+}
+option {
+  background-color: #2c2c38;
+}
+
+.csv {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
