@@ -1,6 +1,5 @@
-// const BASE_URL = "https://luicd-backend.onrender.com";
+const BASE_URL = "https://luicd-backend.onrender.com";
 //
-const BASE_URL = "http://localhost:8080";
 
 export const CREATE_HOSTED_ZONE = `${BASE_URL}/domain/create`;
 
