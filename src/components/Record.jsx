@@ -82,10 +82,8 @@ const Records = () => {
 
   console.log(record);
 
-  // Filter records based on selected type
   const filteredRecords = filterType === "All" ? record : record.filter((rec) => rec.type === filterType);
 
-  // Get unique types for dropdown
   const types = ["All", ...new Set(record.map((rec) => rec.type))];
 
   return (

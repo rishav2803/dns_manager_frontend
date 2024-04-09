@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { toast, ToastContainer } from "react-toastify";
 import { createSingleRecord, createMultipleRecords } from '../service/TaskService';
 import styles from "./Form.module.css";
@@ -35,34 +35,15 @@ function RecordForm({ onClose, option }) {
     setJsonData(event.target.value);
   };
 
-  const handleCsvUpload = (event) => {
+  const handleFileUpload = (event) => {
     const file = event.target.files[0];
     if (!file) return;
 
     const reader = new FileReader();
     reader.onload = (e) => {
-      const csv = e.target.result;
-      const lines = csv.split(/\r?\n/);
-      const headers = lines[0].split(',');
-      const records = [];
-
-      for (let i = 1; i < lines.length; i++) {
-        const values = lines[i].split(',');
-        if (values.length === headers.length) {
-          const record = {};
-          for (let j = 0; j < headers.length; j++) {
-            record[headers[j].trim()] = values[j].trim();
-          }
-          records.push(record);
-        }
-      }
-
-      const newJsonData = {
-        records: [...records]
-      };
-
-      setJsonData(JSON.stringify(newJsonData, null, 2));
-      toast.success("CSV uploaded successfully!", toastOpts);
+      const jsonContent = e.target.result;
+      setJsonData(jsonContent);
+      toast.success("JSON file uploaded successfully!", toastOpts);
     };
 
     reader.readAsText(file);
@@ -93,22 +74,21 @@ function RecordForm({ onClose, option }) {
   };
 
   function isSingle(type){
-    if (type=="A" || type=="AAAA" || type=="MX" || type=="TXT") {
+    if (type === "A" || type === "AAAA" || type === "MX" || type === "TXT") {
       return false;
     }
     return true;
   }
 
   const handleAddValue = () => {
-    if (value.length ==1 && isSingle(type)) {
-      toast.success(`${type} suppors single Value`,toastOpts);
+    if (value.length === 1 && isSingle(type)) {
+      toast.success(`${type} supports single Value`, toastOpts);
       return;
     }
     if (value.length < 4) {
       setValue([...value, '']);
     }
   };
-
 
   const toastOpts = {
     position: "top-right",
@@ -221,7 +201,6 @@ function RecordForm({ onClose, option }) {
               cols={50}
               value={jsonData}
               onChange={handleJsonChange}
-              readOnly={false}
               placeholder={`{
   "records": [
     {
@@ -235,17 +214,17 @@ function RecordForm({ onClose, option }) {
               style={{ fontFamily: "monospace", fontSize: "14px" }}
             />
           </div>
-          <p style={{ color: "white", textAlign: "center" }}>Follow the above structure for the CSV</p>
+          <p style={{ color: "white", textAlign: "center" }}>Follow the above structure for the JSON</p>
           <div className={`${styles.btn} ${styles.light} ${styles.csv}`}>
-            <label htmlFor="csvFile">
-              <strong>Upload CSV</strong>
+            <label htmlFor="jsonFile">
+              <strong>Upload JSON</strong>
             </label>
             <input
               type="file"
-              id="csvFile"
-              accept=".csv"
+              id="jsonFile"
+              accept=".json"
               style={{ display: "none" }}
-              onChange={handleCsvUpload}
+              onChange={handleFileUpload}
               value=""
             />
           </div>
