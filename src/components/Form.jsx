@@ -4,7 +4,7 @@ import { AuthContext } from '../contexts/AuthContext';
 import { DomainRecordContext } from '../contexts/DomainRecordContext';
 import { createSingleDomain, createMultipleDomain } from '../service/TaskService';
 import styles from "./Form.module.css";
-import Loading from "./ui/Loading";
+import Loading from "./Ui/Loading";
 import "react-toastify/dist/ReactToastify.css";
 
 function DomainForm({ onClose, option }) {
