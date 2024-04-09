@@ -58,14 +58,31 @@ export async function createSingleRecord(record, domainId, domainName) {
   }
 }
 
-export async function updateRecord(domainId, recordName, type, ttl, values) {
+export async function updateRecord(
+  domainId,
+  domainName,
+  oldRecordName,
+  recordName,
+  type,
+  ttl,
+  values
+) {
   try {
+    console.log(oldRecordName);
     const response = await fetch(`${UPDATE_RECORD}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ domainId, recordName, type, ttl, values }),
+      body: JSON.stringify({
+        domainId,
+        oldRecordName: oldRecordName.split(".")[0],
+        domainName,
+        recordName: recordName.split(".")[0],
+        type,
+        ttl,
+        values,
+      }),
     });
 
     if (!response.ok) {

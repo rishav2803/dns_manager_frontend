@@ -82,16 +82,10 @@ function UpdateForm({onClose,record}) {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-    const record = {
-      recordName,
-      type,
-      ttl,
-      value
-    };
-    console.log(record);
     try {
       setLoading(true);
-      const data=await updateRecord(id, recordName, type, ttl, value) 
+      console.log(record);
+      const data=await updateRecord(id,name,record.name?record.name:"",recordName!==name?recordName:"", type, ttl, value) 
       if (data && data.mssg) {
         clearHandler();
         (async () => {
@@ -116,7 +110,10 @@ function UpdateForm({onClose,record}) {
       <>
         <div className={styles.form_input}>
           <label>Record Name:</label>
-          <input type="text" required value={recordName} onChange={handleRecordNameChange} />
+          <div className={styles.domain}>
+            <input type="text"  value={recordName==name?"":recordName.split(".")[0]} onChange={handleRecordNameChange} />
+            <p>.{name}</p>
+          </div>
         </div>
         <div className={styles.form_input}>
           <div className={styles.form_input}>
@@ -126,7 +123,6 @@ function UpdateForm({onClose,record}) {
                 <input
                   type="text"
                   value={subtask}
-                  placeholder={"192.0.2.1"}
                   required
                   onChange={(e) => handleValueChange(index, e)}
                 />

@@ -147,7 +147,7 @@ function RecordForm({ onClose, option }) {
         <>
           <div className={styles.form_input}>
             <label>Record Name:</label>
-            <input type="text" required value={recordName} onChange={handleRecordNameChange} />
+            <input type="text" value={recordName} onChange={handleRecordNameChange} />
           </div>
           <div className={styles.form_input}>
             <div className={styles.form_input}>

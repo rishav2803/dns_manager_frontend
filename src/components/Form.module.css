@@ -9,6 +9,13 @@
   gap: 0.8rem;
   margin-bottom: 1rem;
 }
+.domain {
+  display: flex;
+}
+.domain p {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+}
 input[type="text"],
 select,
 input[type="date"],
